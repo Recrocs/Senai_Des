@@ -1,0 +1,10 @@
+//clonar repositório
+git clone https://github.com/Recrocs/Senai_Des.git
+
+//Atualizar Repositório WEB
+git add . //Adicionaa as alterações feitas
+git commit -m "comentário" //Valida as alterações feitas
+git push //Envia as alterações 
+
+//Atualizar Repositório Local
+git pull
