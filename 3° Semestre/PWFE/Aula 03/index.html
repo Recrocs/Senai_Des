@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Locadora - Filmes</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+
+<div class="logo-area">
+
+<img src="logo.png" class="logo">
+
+<h1>Locadora - Cadastro de Filmes</h1>
+
+</div>
+<div>
+
+<input
+type="text"
+id="pesquisa"
+placeholder="Pesquisar filme..."
+onkeyup="pesquisarFilme()"
+>
+
+<select id="filtroGenero" onchange="filtrarGenero()">
+<option value="">Todos</option>
+<option>Ação</option>
+<option>Comédia</option>
+<option>Terror</option>
+<option>Drama</option>
+<option>Ficção</option>
+</select>
+
+<button onclick="abrirModal()">+ Novo Filme</button>
+
+</div>
+
+</header>
+
+<main>
+
+<table>
+
+<thead>
+<tr>
+<th>Capa</th>
+<th>Título</th>
+<th>Gênero</th>
+<th>Ano</th>
+<th>Ações</th>
+</tr>
+</thead>
+
+<tbody id="dados"></tbody>
+
+</table>
+
+</main>
+
+<div id="modal" class="modal">
+
+<div class="modal-content">
+
+<h2>Novo Filme</h2>
+
+<input type="text" id="titulo" placeholder="Título">
+
+<select id="genero">
+<option>Ação</option>
+<option>Comédia</option>
+<option>Terror</option>
+<option>Drama</option>
+<option>Ficção</option>
+</select>
+
+<input type="number" id="ano" placeholder="Ano">
+
+<input type="text" id="capa" placeholder="URL da capa">
+
+<div class="modal-buttons">
+
+<button onclick="salvarFilme()">Salvar</button>
+<button onclick="fecharModal()">Cancelar</button>
+
+</div>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
